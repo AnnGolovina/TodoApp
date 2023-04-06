@@ -1,0 +1,135 @@
+body{
+	margin: 0;
+	padding: 0;	
+	background-image: url(assets/background.jpg);
+	background-attachment: fixed;
+	background-size:100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Acme', sans-serif;
+	font-family: 'Catamaran', sans-serif;
+	font-family: 'Varela', sans-serif;
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin: auto;
+	padding: 0 50px;
+	background-color: rgba(238, 219, 182, 0.805);
+}
+
+h1 {
+	text-align: center;
+	font-size: xxx-large;
+	color: #2d1b03;
+}
+
+h2 {
+	font-size: xx-large;
+	color: #2d1b03;
+}
+
+.input-todo, #todo-search{
+	font-size: 25px;
+	height: 30px;
+	width: 400px;
+	border-radius: 5px;
+}
+
+.input-todo:focus, #todo-search:focus {
+	outline: #bab0a9;
+}
+
+.done {
+	opacity: 0.3;
+}
+
+.done-color {
+	background-color: #d0c3b8;
+}
+
+.todolist-wrapper, .search-wrapper{
+	display: flex;
+	align-items: center;
+	
+}
+
+.add-todo, #delete-search-btn{
+	font-size: 25px;
+	min-width: 140px;
+	border-radius: 5px;
+	margin: 10px;
+	background-color: #d7d1cd;
+}
+
+.todo-item {
+	display: flex;
+	justify-content: space-between;
+	font-size: 25px;
+	margin: 15px;
+	border: 1px solid black;
+	transition: 0.5s all;
+}
+
+
+.delete-todo {
+	font-size: 25px;
+	border-radius: 5px;
+	background-color: #d7d1cd;
+}
+
+.user-button {
+	margin: 5px;
+	font-size: 25px;
+	background-color: #d7d1cd;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+#clear-current-user {
+	font-size: 25px;
+	margin: 5px;
+	border-radius: 5px;
+	background-color: #dacac0;
+}
+
+.active-user-btn {
+	background-color: #d99b72;
+	border-radius: 5px;
+}
+
+.todo {
+	display: flex;
+	justify-content: space-between;
+	font-size: 25px;
+	border-bottom: 1px solid #633d07;
+	margin: 20px 0;
+	background-color: #c48f64;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+#up-button {
+	position: fixed;	
+	width: 85px;
+	height: 85px;
+	font-size: 30px;
+	background-color: #bf8a67;
+	border-color: #af5519;
+	border-radius: 50%;
+	right: 0;
+	bottom: 0;
+}
+
+@keyframes glowing{
+	0% { background-color: #c08258; box-shadow: 0 0 3px #bab0a9; bottom: 2px;}
+	25%{ background-color: #bf7f55; box-shadow: 0 0 3px #bc967c;bottom: 5px; }
+	50% { background-color: #be7d51; box-shadow: 0 0 10px #b97547; bottom: 2px; }
+	100% { background-color: #c27b4b; box-shadow: 0 0 3px #af5519; bottom: 0px;}
+}
+
+#up-button{
+	animation: glowing 1300ms infinite;
+}
