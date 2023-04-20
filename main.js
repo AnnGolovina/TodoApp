@@ -38,11 +38,12 @@ function renderToDo(todosToRender) {
             <div class="todo ${todo.done && "done"}">
                 <div>
                     <span>${i + 1}.</span>
-                    
+                    <label class="check">
                     <input id="${todo.id}" type="checkbox" ${
       todo.done && "checked"
-    } class="todo-checkbox" />
-                   
+    } class="todo-checkbox" />   
+                    <span tabindex="0"></span>
+                   </label>
                     <span>${todo.text}</span>
                 </div>
                 <button id="${todo.id}" class="delete-todo">Delete</button>

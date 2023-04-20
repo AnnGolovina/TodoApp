@@ -133,3 +133,26 @@ h2 {
 #up-button{
 	animation: glowing 1300ms infinite;
 }
+
+.check input {
+	display: none;
+  }
+.check input:checked + span::before {
+	opacity: 1;
+  }
+.check span {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+  }
+.check span::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: "✔";
+	opacity: 0;
+	transition: 0.2s;
+  }
